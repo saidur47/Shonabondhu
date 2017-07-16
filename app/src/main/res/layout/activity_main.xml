@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:clipChildren="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="3"
+    tools:context="com.project.cse323.shonabondhu.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:id="@+id/buttonLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_width="45dp"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:text="year"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_width="100dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="month"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:width="60dp" />
+
+            <TextView
+                android:text="day"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:width="60dp" />
+
+            <TextView
+                android:text="hour"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:width="60dp" />
+
+            <TextView
+                android:text="minute"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:width="60dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/customStart">
+
+            <TextView
+                android:id="@+id/startTV"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:textStyle="normal|bold" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerYear"
+                android:layout_width="100dp" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerMonth" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerDate"
+                android:layout_width="60dp" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerHour"
+                android:layout_width="60dp" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerMinute"
+                android:layout_width="60dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/customEnd">
+
+            <TextView
+                android:id="@+id/endTv"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="End"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerYearEnd"
+                android:layout_width="100dp" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerMonthEnd"
+                android:layout_width="60dp" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerDateEnd" />
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerHourEnd" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerMinuteEnd"
+                android:layout_width="60dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/updButton"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:onClick="showData"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/chartButton"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chart" />
+
+            <Button
+                android:id="@+id/clrData"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clean" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="9dp"
+        android:minHeight="0dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_marginTop="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/Sensor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:text="Sensor-1"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:width="100dp" />
+
+        <TextView
+            android:id="@+id/Sensor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:text="Sensor-2"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:width="100dp" />
+
+        <TextView
+            android:id="@+id/Sensor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:text="Sensor-3"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:width="100dp" />
+
+        <TextView
+            android:id="@+id/Timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:text="Timestamp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:width="250dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/divider_horizontal_dim_dark"
+        android:elevation="2dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginTop="-18dp">
+
+        <TableLayout
+            android:id="@+id/displayLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/updButton"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"
+                    android:text="Sensor-1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:width="100dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"
+                    android:text="Sensor-2"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:width="100dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"
+                    android:text="Sensor-3"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:width="100dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"
+                    android:text="Timestamp"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:width="250dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/display_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
